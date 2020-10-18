@@ -29,22 +29,17 @@ def attendZoom():
             time.sleep(5)
 
             x,y = pyautogui.locateCenterOnScreen('join.png', confidence = 0.8)
+
             pyautogui.click(x,y)
-
             pyautogui.press('enter',interval=5)
+
             pyautogui.write(pd_df.iloc[0,1])
-
             pyautogui.press('enter',interval=5)
+
             pyautogui.write(str(int(pd_df.iloc[0,2])))
-
             pyautogui.press('enter',interval = 10)
-            pyautogui.hotkey('alt','f4')
-
             time.sleep(0.5)
             pyautogui.hotkey('alt','f4')
-
-
-
 
 if __name__ == "__main__":
     attendZoom()
